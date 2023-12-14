@@ -30,7 +30,10 @@ const songsSlice = createSlice({
             
             const index = state.indexOf(action.payload);
             state.splice(index, 1);
-        }
+        } 
+    },
+    extraReducers(builder) {
+        builder.addCase(moviesSlice.actions.reset, (state, action) => []);
     }
 });
 
